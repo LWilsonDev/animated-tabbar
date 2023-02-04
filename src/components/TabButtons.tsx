@@ -11,7 +11,6 @@ import tw from 'twrnc';
 export interface TabButton {
   title: string;
   accessibilityLabel: string;
-  onPress: () => void;
 }
 
 interface TabButtonsProps {
@@ -49,7 +48,6 @@ const TabButtons: FC<TabButtonsProps> = ({
   // We can set a callback for any functionality that should fire once the animation is finished
   const handlePressCb = (index: number) => {
     setSelectedTab(index);
-    buttons[index].onPress();
   };
 
   const onTabPress = (index: number) => {

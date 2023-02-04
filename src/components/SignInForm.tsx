@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React, {useState} from 'react';
 import TabButtons, {TabButton} from './TabButtons';
 import tw from 'twrnc';
@@ -12,11 +12,13 @@ const SignInForm = () => {
   const [selectedTab, setSelectedTab] = useState<SignInTab>(SignInTab.Email);
 
   const buttons: TabButton[] = [
-    {title: 'email', accessibilityLabel: 'Login with email', onPress: () => {}},
+    {
+      title: 'email',
+      accessibilityLabel: 'Login with email',
+    },
     {
       title: 'phone number',
       accessibilityLabel: 'Login with phone number',
-      onPress: () => {},
     },
   ];
 
@@ -39,5 +41,3 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
-
-const styles = StyleSheet.create({});
